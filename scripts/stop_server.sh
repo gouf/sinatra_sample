@@ -1,3 +1,6 @@
 #!/bin/bash
 
-kill `pgrep ruby`
+isExistApp=`pgrep ruby`
+if [[ -n  \$isExistApp ]]; then
+   kill $isExistApp
+fi
