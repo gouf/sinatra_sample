@@ -13,5 +13,5 @@ echo `which bundle`
 # ~/bin/bundle install --path ~/vendor
 # ~/bin/bundle exec rackup -p 80 -o 0.0.0.0 -P rack.pid -D
 
-bundle install
-bundle exec rackup -p 8080 -o 0.0.0.0 -D
+/usr/local/bin/bundle install
+/usr/local/bin/bundle exec rackup -p 8080 -o 0.0.0.0 -D
