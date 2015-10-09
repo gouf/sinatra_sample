@@ -1,4 +1,3 @@
 #!/bin/bash
 
-cd ..
-kill `cat rack.pid`
+kill `pgrep ruby`
