@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /var/www/sinatra
 permissions:
-  - object: /var/www/sinatra
+  - object: /var/www/sinatra/.bundler
     pattern: "**"
     owner: ec2-user
     group: ec2-user
