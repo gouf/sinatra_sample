@@ -1,6 +1,3 @@
 #!/bin/bash
 
-echo `pwd`
-cd ..
-echo `pwd`
-bundle install
+su -l deploy -c 'cd /var/www/html/sinatra && bundle install --path vendor/bundle'
