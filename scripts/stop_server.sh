@@ -2,6 +2,6 @@
 
 isExistApp=`pgrep ruby`
 
-if [[ -n $isExistApp ]]; then
+if [[ -n "$isExistApp" ]]; then
    kill $isExistApp
 fi
