@@ -1,18 +1,8 @@
 #!/bin/bash
 
-echo `whoami`
-echo `pwd`
-
-export PATH="/usr/local/bin:$PATH"
 cd /home/ec2-user/sinatra
 
-echo "BUNDLE_GEMFILE : $BUNDLE_GEMFILE"
-echo `pwd`
-
-unset BUNDLE_GEMFILE
-
 gem install bundler
-echo `which bundle`
 
-~/bin/bundle install
-~/bin/rackup -p 8080 -o 0.0.0.0 -D
+/home/ec2-user/bin/bundle install
+/home/ec2-user/bin/rackup -p 8080 -o 0.0.0.0 -D
