@@ -2,19 +2,24 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/sinatra
+    destination: /home/ec2-user/sinatra
+permissions:
+  - object: /home/ec2-user/sinatra
+    owner: ec2-user
+    group: ec2-user
+    mode: 644
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
-      timeout: 300
+      timeout: 600
       runas: root
     - location: scripts/install_gems.sh
-      timeout: 300
+      timeout: 600
       runas: ec2-user
   ApplicationStart:
     - location: scripts/start_server.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
   ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
