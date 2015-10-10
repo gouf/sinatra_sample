@@ -15,4 +15,4 @@ gem install bundler
 echo `which bundle`
 
 # ~/bin/bundle install --path=/home/ec2-user
-~/bin/bundle exec rackup -p 8080 -o 0.0.0.0 -D
+~/bin/rackup -p 8080 -o 0.0.0.0 -D
