@@ -4,14 +4,15 @@ echo `whoami`
 echo `pwd`
 
 export PATH="/usr/local/bin:$PATH"
-cd /var/www/sinatra
+cd /home/ec2-user/sinatra
+
+echo "BUNDLE_GEMFILE : $BUNDLE_GEMFILE"
 echo `pwd`
-gem install io-console
-gem install rack
+
+unset BUNDLE_GEMFILE
+
 gem install bundler
 echo `which bundle`
-# ~/bin/bundle install --path ~/vendor
-# ~/bin/bundle exec rackup -p 80 -o 0.0.0.0 -P rack.pid -D
 
-/usr/local/bin/bundle install
-/usr/local/bin/bundle exec rackup -p 8080 -o 0.0.0.0 -D
+bin/bundle install
+bin/bundle exec rackup -p 8080 -o 0.0.0.0 -D
