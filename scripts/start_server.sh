@@ -14,5 +14,5 @@ unset BUNDLE_GEMFILE
 gem install bundler
 echo `which bundle`
 
-bin/bundle install
-bin/bundle exec rackup -p 8080 -o 0.0.0.0 -D
+~/bin/bundle install --path=/home/ec2-user/sinatra
+~/bin/bundle exec rackup -p 8080 -o 0.0.0.0 -D
